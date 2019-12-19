@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  font-family: Roboto;
+  line-height: 1.4;
+}
+
+section{
+  font-size: 18px;
+}
+
+.question h1, .nameArticle h1, .headingOfSection h1, .reviews, .welcomeText{
+  font-size: 34px;
+}
+
+.counter-item p, .welcomeSecondText p, .secondTextFirstBlock{
+  font-size: 18px;
+}
+
+.counter{
+  font-size: 24px;
+} 
+
+.firstBlockText{
+  font-size: 50px;
+}
+
+.copyright{
+  font-size: 10px;
+}
+
+@media (max-width: 992px) {
+  .firstBlockText{
+    font-size: 36px;
+  }
+
+  .counter-item p, .welcomeSecondText p, .secondTextFirstBlock{
+    font-size: 16px;
+  }
+
+  .question h1, .nameArticle h1, .headingOfSection h1, .reviews, .welcomeText{
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .firstBlockText{
+    font-size: 26px;
+  }
+
+  .counter-item p, .welcomeSecondText p, .secondTextFirstBlock, .visa ul li, .textOfChoise li{
+    font-size: 14px;
+  }
+textOfChoise
+  .question h1, .nameArticle h1, .headingOfSection h1, .reviews, .welcomeText, .question h1{
+    font-size: 20px;
+  }
+
+  .nameVisa h2, .tileOfChoise, .counter{
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstBlockText{
+    font-size: 20px;
+  }
+
+  .counter-item p, .welcomeSecondText p, .secondTextFirstBlock, .visa ul li, .textOfChoise li{
+    font-size: 12px;
+  }
+textOfChoise
+  .question h1, .nameArticle h1, .headingOfSection h1, .reviews, .welcomeText, .question h1{
+    font-size: 18px;
+  }
+
+  .nameVisa h2, .tileOfChoise, .counter{
+    font-size: 16px;
+  }
+
+.contacts{
+  font-size: 14px;
+}
+
+}

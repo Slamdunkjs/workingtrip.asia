@@ -1,0 +1,942 @@
+* {
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+body {
+  position: relative;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+header, article, .statistic, aside, footer{
+  color:#191c21;
+}
+
+.firstBlock{
+  background-image: url(../img/fon.png);
+  background-size: cover;
+  height: 800px;
+  color: white;
+}
+
+.textFirstBlock{
+  height: 100%;
+  position: relative;
+}
+
+.textOnImg{
+  position: absolute;
+  bottom: 35%;
+  left: 30px;
+  opacity: 0;
+  color: white;
+}
+
+.textOnImg span{
+  text-transform: uppercase;
+}
+
+.activeTextOnImg{
+  animation: opaciteTextOnFirstPage;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+@keyframes opaciteTextOnFirstPage{
+  0%{
+    opacity: 0;
+    left: -100px;
+  }
+  100%{
+    opacity: 1;
+    left: 20px;
+  }
+}
+
+.welcome{
+  padding: 55px 20px;
+}
+
+.second{
+  background: #f0f4f7;
+}
+
+.welcomeText{
+  display: block;
+  font-weight: bold;
+}
+
+.welcomeSecondText{
+  padding-top: 10px;
+}
+
+header{
+  position: absolute;
+  height: 106px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: white;
+}
+
+.header{
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoImg{
+  height: 80px;
+}
+
+.menu{
+  width: 50%;
+}
+
+.menuCenter{
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuCenter li a{
+  display: inline-block;
+  color:grey;
+  text-transform: uppercase;
+}
+
+.navMenu, .footerIcon, .footerIcon a, .pageMenuRight{
+  transition: 0.4s;
+}
+
+.navMenu:hover, .pageMenuRight:hover{
+  color: #191c21;
+}
+
+.navMenuPast{
+  position: relative;
+  overflow: hidden;
+}
+
+.navMenuSpan{
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #191c21;
+  left: -100%;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.navMenuPast:hover .navMenuSpan{
+  transform: translateX(100%);
+}
+
+.contacts a{
+  color: #191c21;
+  font-weight: bold;
+}
+
+.activeCall {
+  animation: shake 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  1% { transform: translate(-1px, -2px) rotate(-1deg); }
+  2% { transform: translate(-3px, 0px) rotate(1deg); }
+  3% { transform: translate(3px, 2px) rotate(0deg); }
+  4% { transform: translate(1px, -1px) rotate(1deg); }
+  5% { transform: translate(-1px, 2px) rotate(-1deg); }
+  6% { transform: translate(-3px, 1px) rotate(0deg); }
+  7% { transform: translate(3px, 1px) rotate(-1deg); }
+  8% { transform: translate(-1px, -1px) rotate(1deg); }
+  9% { transform: translate(1px, 2px) rotate(0deg); }
+  10% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.fixedHeader{
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+  animation-name: showHeader;
+  animation-duration: 0.3s;
+}
+
+@keyframes showHeader{
+  0%{
+    opacity: 0;
+    top: -100px;
+  }
+  100%{
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.statistic{
+  background: #577A9C;
+  color:white;
+}
+
+.headingOfSection{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.counters{
+  padding: 0 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.counter{
+  font-weight: bold;
+}
+
+.counter-item {
+  padding: 0 30px;
+  width: 33.333%;
+  text-align: center;
+}
+
+main{
+  background: #0b2239 ;
+  color:white;
+}
+
+main, .statistic, aside{
+  padding: 55px 0;
+}
+
+.visas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answer{
+  margin-top: 30px;
+  display: flex;
+}
+
+.visa{
+  padding: 20px;
+  width: 75%;
+}
+
+.visa ul li{
+  padding-top: 10px;
+}
+
+.noteText{
+  font-size: 10px;
+}
+
+.question, .noteText{
+  padding: 0 20px;
+}
+
+.question h1{
+  padding-bottom: 20px;
+}
+
+.divForVisa{
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstImg, .thirdImg{
+  justify-content: flex-end;
+}
+
+.textForVisa, .imgForVisa{
+  width: 45%;
+}
+
+.textForVisaTwo{
+  text-align: right;
+}
+
+.imgForVisa{
+  display: flex;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+}
+
+.imgVisa{
+  height: 200px;
+}
+
+.activeImgLeft{
+  animation: visibilityImgLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.activeImgRight{
+  animation: visibilityImgRight;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes visibilityImgLeft{
+  0%{
+    opacity: 0;
+    left: -100px;
+  }
+  100%{
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes visibilityImgRight{
+  0%{
+    opacity: 0;
+    left: 100px;
+  }
+  100%{
+    opacity: 1;
+    left: 0;
+  }
+}
+
+article{
+  padding: 55px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.why{
+  display: flex;
+}
+
+.nameArticle{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.choice{
+  width: 33.333%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon{
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.iconImg{
+  width: 75px;
+}
+
+.nameVisa{
+  position: relative;
+  padding: 10px 0;
+}
+
+.line, .lineWhite{
+  display: block;
+  width: 30px;
+  height: 2px;
+  border-width: 5px;
+  position: absolute;
+  bottom: 0;
+}
+
+.line{
+  background: #191c21;
+  left: 0%;
+}
+
+.lineWhite{
+  background: white;
+}
+
+.lineWhiteTwo{
+  right: 0;
+}
+
+.tileOfChoise{
+  padding: 20px 0;
+}
+
+.textOfChoise li{
+  padding-top: 20px;
+}
+
+.reviews{
+  font-weight: bold;
+}
+
+aside{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mySlide{
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foto{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+aside img{
+  width: 100%;
+}
+
+.name{
+  padding: 20px;
+}
+
+.say{
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:#191c21;
+  font-weight: bold;
+  transform: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  transition: 0.2s;
+}
+
+.prev{
+  left: 0;
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #0b2239 ;
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade{
+  from{opacity: 0.4}
+  to{opacity: 1}
+}
+
+.last{
+  color:white;
+  padding: 55px 20px;
+  display: flex;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#head5{
+  background: #0b2239;
+  height: 300px;
+}
+
+.form{
+  width: 50%;
+  display: none;
+}
+
+#map{
+  height: 100%;
+  width: 75%;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px;
+}
+
+.footerIcons{
+  display: flex;
+}
+
+.footerIcon{
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+
+.footerIcon a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerIcon a:hover{
+  color:#191c21;
+}
+.footerIcon:hover{
+  border-color: #191c21;
+}
+
+.copyright{
+  padding-top: 10px;
+  color: grey;
+}
+
+.menu-btn{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  display: none;
+  min-width: 117px;
+}
+
+.menu-btn:hover{
+  cursor: pointer;
+}
+
+.menu-btn span, 
+.menu-btn span::after, 
+.menu-btn span::before{
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #191c21;
+}
+
+.menu-btn span::after, 
+.menu-btn span::before{
+  content: "";
+  transition: 0.3s;
+}
+
+.menu-btn span::before{
+  transform: translateY(7px);
+}
+
+.menu-btn span::after{
+  transform: translateY(-7px);
+}
+
+.menu-btn:hover span:before{
+  transform: translateY(5px);
+}
+
+.menu-btn:hover span:after{
+  transform: translateY(-5px);
+}
+
+.screenOpacity{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menuRight{
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  right: -200px;
+  background: white;
+  transition: 0.5s;
+  z-index: 2000;
+  padding: 50px 30px;
+  position: fixed;
+}
+
+.activeMenu{
+  transform: translateX(-200px);
+}
+
+.pageMenuRight{
+  color:grey;
+  text-transform: uppercase;
+}
+
+.menuRightVertical{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menuRightVertical li{
+  width: auto;
+  margin-top: 10px;
+}
+
+.screenOpacityOff{
+  cursor: url('img/close.cur'), url('img/close.png'), url('img/close.svg'), default;
+}
+
+@media (max-width: 1200px){
+  .say{
+    min-height: 66px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  main, .statistic, aside{
+    padding: 30px 0;
+  }
+
+  .last{
+    padding: 30px 15px;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .menu-btn{
+    display: flex;
+  }
+
+  @keyframes opaciteTextOnFirstPage{
+    0%{
+      opacity: 0;
+      left: -100px;
+    }
+    100%{
+      opacity: 1;
+      left: 15px;
+    }
+  }
+
+  .firstBlock {
+    background-position-x: -150px;
+  }
+
+  .welcome {
+    padding: 30px 15px;
+  }
+
+  .divForVisa {
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .imgForVisa{
+    display: flex;
+    justify-content: center;
+  }
+
+  .textForVisa, .imgForVisa{
+    width: 60%;
+  }
+
+  .divForVisaReverse{
+    flex-direction: column-reverse;
+  }
+
+  .textForVisa{
+    padding-bottom: 15px;
+  }
+
+  .imgVisa{
+    width: 100%;
+    height: 250px;
+  }
+
+  .visa{
+    width: 85%;
+  }
+
+  .choice{
+    padding: 0 15px;
+  }
+
+  .textOfChoise li{
+    padding-top: 10px;
+  }
+
+  .tileOfChoise{
+    padding: 10px 0;
+  }
+
+  article {
+    padding: 30px 0;
+  }
+
+  .nameArticle{
+    padding-bottom: 20px;
+  }
+
+  .counter-item{
+    padding: 20px;
+  }
+  .counters {
+    padding: 0 15px;
+  }
+
+  .mySlide {
+    width: 80%;
+  }
+
+  footer{
+    padding: 50px;
+  }
+  
+  .question h1{
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .textForVisa, .imgForVisa{
+    width: 80%;
+  }
+  .activeTextOnImg{
+    width: 95%;
+  }
+
+  .say{
+    min-height: 88px;
+  }
+
+  .firstBlock {
+    background-position-x: -200px;
+    height: 770px;
+  }
+
+  .logoImg{
+    height: 70px;
+  }
+
+  .menu-btn{
+    min-width: 102px;
+  }
+
+  header{
+    display: flex;
+    align-items: center; 
+  }
+
+  .visa{
+    width: 90%;
+  }
+
+  .choice{
+    padding: 0 10px;
+  }
+
+ .iconImg{
+    width: 60px;
+}
+
+.counter-item{
+  padding: 10px;
+}
+
+.gm-style-mtc{
+  opacity: 0;
+}
+
+footer{
+  padding: 40px;
+}
+
+.counters{
+  padding: 0 5px;
+}
+
+.foto{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+}
+
+@media (max-width: 576px) {
+
+  .textForVisa, .imgForVisa{
+    width: 100%;
+  }
+
+  .imgVisa{
+    width: 100%;
+    height: 200px;
+  }
+
+  .textOnImg{
+    position: absolute;
+    bottom: 25%;
+  }
+
+  .headingOfSection{
+    padding-bottom: 15px;
+  }
+
+  .logoImg{
+    height: 60px;
+  }
+
+  .menu-btn{
+    min-width: 48px;
+  }
+
+  .menuRight{
+    right: -250px;
+    padding: 40px 20px;
+  }
+
+  .activeTextOnImg{
+    width: 90%;
+  }
+
+  .firstBlock {
+    background-position-x: -250px;
+    background-position-y: 50px;
+    height: 500px;
+  }
+
+  .header{
+    padding-right: 10px;
+  }
+
+@keyframes opaciteTextOnFirstPage{
+  0%{
+    opacity: 0;
+    left: -100px;
+  }
+  100%{
+    opacity: 1;
+    left: 10px;
+  }
+}
+
+.welcome{
+  padding: 10px;
+}
+
+  .textForVisa{
+    padding: 0 0 10px 0;
+  }
+
+  .visa{
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .choice{
+    padding: 0 5px;
+  }
+
+ .iconImg{
+    width: 50px;
+}
+
+.counter-item{
+  padding: 10px;
+}
+
+.gm-style-mtc{
+  opacity: 0;
+}
+
+footer{
+  padding: 40px;
+}
+
+.counters{
+  padding: 0 5px;
+}
+
+.foto{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+  .say{
+    min-height: 176px;
+  }
+
+  .name{
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+  }
+
+  .adressFooter{
+    text-align: center;
+  }
+}
